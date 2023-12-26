@@ -113,7 +113,11 @@
             </label>
           </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary btn-lg">
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg"
+              id="signupButton"
+            >
               Sign up
             </button>
           </div>
@@ -136,6 +140,16 @@
           // like sending the data to a server or validating inputs.
           alert("Form submitted!");
         });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get a reference to the "Sign up" button by its ID
+        var signupButton = document.getElementById("signupButton");
+
+        // Add a click event listener to the button
+        signupButton.addEventListener("click", function () {
+          // Redirect to SignIn.html when the button is clicked
+          window.location.href = "SignIn.html";
+        });
+      });
     </script>
   </body>
 </html>

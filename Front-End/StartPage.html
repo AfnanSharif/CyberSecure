@@ -95,11 +95,22 @@
     <div class="image-container"></div>
     <div class="text">CyberSecure</div>
     <div class="line">The one Soloution for all your problems</div>
-    <button class="button">Start</button>
+    <button class="button" id="startButton">Start</button>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get a reference to the "Start" button by its ID
+        var startButton = document.getElementById("startButton");
+
+        // Add a click event listener to the button
+        startButton.addEventListener("click", function () {
+          // Redirect to SignUp.html when the button is clicked
+          window.location.href = "SignUp.html";
+        });
+      });
+    </script>
   </body>
 </html>

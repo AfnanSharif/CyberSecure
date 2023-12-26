@@ -77,8 +77,11 @@
           />
         </div>
         <div class="d-grid">
-          <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+          <button type="submit" class="btn btn-primary btn-lg" id="loginButton">
+            Log in
+          </button>
         </div>
+
         <p class="text-center mt-2">
           Don't have an account? <a href="signup.html">Sign up</a>
         </p>
@@ -95,8 +98,17 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
           // Implement your login logic here, for example, an AJAX request to your server
-          alert("Login submitted!");
         });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get a reference to the "Log in" button by its ID
+        var loginButton = document.getElementById("loginButton");
+
+        // Add a click event listener to the button
+        loginButton.addEventListener("click", function () {
+          // Redirect to HomeScreen.html when the button is clicked
+          window.location.href = "HomeScreen.html";
+        });
+      });
     </script>
   </body>
 </html>
